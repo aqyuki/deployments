@@ -19,3 +19,6 @@ Deployments で管理されているアプリケーションは以下のよう�
 2.  babyrite
     - [m1sk9/babyrite](https://github.com/m1sk9/babyrite)
     - メッセージリンク付きのメッセージを展開してくれる Discord Bot です．
+3.  minio
+    - [minio/minio](https://github.com/minio/minio)
+    - AWS S3 互換のストレージ
