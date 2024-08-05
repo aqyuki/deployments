@@ -1,0 +1,8 @@
+version: "3"
+
+tasks:
+  commit:
+    silent: true
+    desc: "Commit the staged changes with gitmoji"
+    cmds:
+      - gitmoji commit
