@@ -22,3 +22,6 @@ Deployments で管理されているアプリケーションは以下のよう�
 3.  minio
     - [minio/minio](https://github.com/minio/minio)
     - AWS S3 互換のストレージ
+4.  miniflux
+    - [miniflux/v2](https://github.com/miniflux/v2)
+    - RSS Feeder
