@@ -1,6 +1,10 @@
 version: "3"
 
 tasks:
+  setup-docker-compose:
+    desc: "Initialize docker compose"
+    cmds:
+      - docker network create web-app-network
   commit:
     silent: true
     desc: "Commit the staged changes with gitmoji"
