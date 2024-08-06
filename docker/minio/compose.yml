@@ -10,3 +10,9 @@ services:
     command: "server /export --address :9000 --console-address :9001"
     volumes:
       - "/var/deployment/minio:/export"
+    networks:
+      - web-app-network
+
+networks:
+  web-app-network:
+    external: true
