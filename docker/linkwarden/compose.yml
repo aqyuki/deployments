@@ -12,6 +12,7 @@ services:
     volumes:
       - /var/devlopment/linkwarden/data:/data/data
     networks:
+      linkwarden-network:
       web-app-network:
     depends_on:
       - postgres
@@ -24,8 +25,10 @@ services:
     volumes:
       - /var/devlopment/linkwarden/postgres:/var/lib/postgresql/data
     networks:
-      - web-app-network
+      linkwarden-network:
+      web-app-network:
 
 networks:
+  linkwarden-network:
   web-app-network:
     external: true
