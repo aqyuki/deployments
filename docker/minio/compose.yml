@@ -11,7 +11,8 @@ services:
     volumes:
       - "/var/deployment/minio:/export"
     networks:
-      - web-app-network
+      web-app-network:
+        ipv4_address: 172.23.10.1
 
 networks:
   web-app-network:

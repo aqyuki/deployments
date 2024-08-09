@@ -25,3 +25,15 @@ Deployments で管理されているアプリケーションは以下のよう�
 4.  miniflux
     - [miniflux/v2](https://github.com/miniflux/v2)
     - RSS Feeder
+
+# Deployment
+
+一部のアプリケーションはデプロイ前に事前準備が必要となる場合があります．各設定の詳細は[docs/config.md](./docs/config.md)を参照してください．
+
+## web-app-network の作成
+
+Docker compose でコンテナを立ち上げる前に，`web-app-network`を作成しておく必要があります．
+
+```bash
+docker network create --driver bridge --subnet 172.23.0.0/16 web-app-network
+```
