@@ -22,7 +22,7 @@ services:
     env_file:
       - .env
     networks:
-      - web-app-network
+      web-app-network:
 
 networks:
   web-app-network:

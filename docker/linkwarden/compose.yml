@@ -12,7 +12,7 @@ services:
     volumes:
       - /var/devlopment/linkwarden/data:/data/data
     networks:
-      - web-app-network
+      web-app-network:
     depends_on:
       - postgres
   postgres:
