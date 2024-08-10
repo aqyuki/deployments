@@ -9,7 +9,9 @@ services:
       - .env
     command: "server /export --address :9000 --console-address :9001"
     volumes:
-      - "/var/deployment/minio:/export"
+      - type: bind
+        source: /var/deployment/minio
+        target: /export
     networks:
       web-app-network:
         ipv4_address: 172.23.10.1

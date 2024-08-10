@@ -10,7 +10,9 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - /var/devlopment/linkwarden/data:/data/data
+      - type: bind
+        source: /var/devlopment/linkwarden/data
+        target: /data/data
     networks:
       linkwarden-network:
       web-app-network:
@@ -23,7 +25,9 @@ services:
       - .env
     restart: unless-stopped
     volumes:
-      - /var/devlopment/linkwarden/postgres:/var/lib/postgresql/data
+      - type: bind
+        source: /var/devlopment/linkwarden/postgres
+        target: /var/lib/postgresql/data
     networks:
       linkwarden-network:
       web-app-network:
