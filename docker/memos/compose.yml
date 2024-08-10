@@ -12,7 +12,9 @@ services:
     env_file:
       - .env
     volumes:
-      - /var/deployment/memos/memos:/var/opt/memos
+      - type: bind
+        source: /var/deployment/memos/memos
+        target: /var/opt/memos
     networks:
       memos-network:
       web-app-network:
@@ -21,7 +23,9 @@ services:
     image: postgres:16.4
     restart: unless-stopped
     volumes:
-      - "/var/deployment/memos/database:/var/lib/postgresql/data/"
+      - type: bind
+        source: /var/deployment/memos/database
+        target: /var/lib/postgresql/data
     env_file:
       - .env
     networks:

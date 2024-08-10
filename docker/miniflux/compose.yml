@@ -15,7 +15,9 @@ services:
     env_file:
       - .env
     volumes:
-      - /var/deployment/miniflux/database:/var/lib/postgresql/data
+      - type: bind
+        source: /var/deployment/miniflux/database
+        target: /var/lib/postgresql/data
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "miniflux"]
       interval: 10s
