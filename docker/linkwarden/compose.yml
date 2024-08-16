@@ -1,6 +1,6 @@
 services:
   linkwarden:
-    image: ghcr.io/linkwarden/linkwarden:v2.6.2
+    image: ghcr.io/linkwarden/linkwarden:v2.7.1
     container_name: linkwarden
     env_file:
       - .env
