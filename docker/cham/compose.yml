@@ -1,0 +1,12 @@
+services:
+  bot:
+    container_name: cham-bot
+    image: ghcr.io/aqyuki/cham/cham:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - cham-network
+
+networks:
+  cham-network:
