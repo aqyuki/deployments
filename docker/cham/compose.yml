@@ -1,7 +1,7 @@
 services:
   bot:
     container_name: cham-bot
-    image: ghcr.io/aqyuki/cham/cham:latest
+    image: ghcr.io/aqyuki/cham:latest
     restart: unless-stopped
     env_file:
       - .env
