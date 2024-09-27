@@ -1,12 +1,12 @@
 services:
   bot:
-    container_name: tubu-bot
-    image: ghcr.io/aqyuki/tubu/tubu:1.2.0
+    container_name: smoke-bot
+    image: ghcr.io/aqyuki/smoke/smoke:v1.0.1
     restart: unless-stopped
     env_file:
       - .env
     networks:
-      - tubu-network
+      - smoke-network
 
 networks:
-  tubu-network:
+  smoke-network:
